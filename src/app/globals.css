@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,17 +6,124 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #ff6b00;
+  --primary-hover: #ff8533;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #171717;
+  --foreground: #ffffff;
+  --primary: #ff6b00;
+  --primary-hover: #ff8533;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+@layer utilities {
+  .font-opensans {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+/* Modern scrollbar for message container */
+.messages-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.messages-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 8px;
+}
+
+/* Dark mode scrollbar */
+.dark .messages-scrollbar {
+  scrollbar-color: #4b5563 transparent;
+}
+
+.dark .messages-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+}
+
+/* Invisible scrollbar for textarea */
+.invisible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes magical-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal-text {
+  opacity: 0;
+  animation: reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-text-delay-1 {
+  opacity: 0;
+  animation: reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.reveal-text-delay-2 {
+  opacity: 0;
+  animation: reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.reveal-button {
+  opacity: 0;
+  animation: magical-reveal 1s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
 }
