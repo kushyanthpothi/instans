@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src="https://i.ibb.co/DPQnwsPc/download-2.png" alt="Instans Logo" width="200"/>
+  <h1>🎯 Instans</h1>
+  <p>AI-Powered Interview Preparation Assistant with Screen Sharing</p>
+</div>
 
-## Getting Started
+<div align="center">
+  
+  ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+  ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+  ![Google AI](https://img.shields.io/badge/Google_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
-First, run the development server:
+</div>
 
+---
+
+## ✨ Features
+
+🤖 **AI-Powered Assistance**
+- Real-time interview feedback
+- Personalized coaching
+- Technical question practice
+- System design discussion support
+
+🎥 **Screen Sharing**
+- Live code review
+- System design whiteboarding
+- Real-time collaboration
+- Interview simulation
+
+🎯 **Interview Preparation**
+- Resume analysis
+- Company-specific preparation
+- Role-based question sets
+- Performance tracking
+
+🌓 **Modern UI/UX**
+- Dark/Light theme
+- Responsive design
+- Intuitive interface
+- Keyboard shortcuts
+
+## 🚀 Tech Stack
+
+### Frontend
+- **Framework:** Next.js 14
+- **UI Library:** React 19
+- **Styling:** TailwindCSS
+- **Code Highlighting:** Prism React Renderer
+- **Markdown:** React Markdown
+- **Animations:** Framer Motion
+
+### AI/ML
+- **Language Model:** Google Generative AI
+- **Speech Recognition:** Google Cloud Speech
+- **Voice Processing:** Vosk Browser
+
+### Development Tools
+- **Type Checking:** TypeScript
+- **Linting:** ESLint
+- **Package Manager:** npm/yarn
+- **Build Tool:** Turbopack
+
+## 🛠 Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/kushyanthpothi/instans.git
+cd instans
+```
+
+2. **Install dependencies**
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Set up environment variables**
+```bash
+cp .env.example .env.local
+```
+Edit `.env.local` with your API keys and configuration
+
+4. **Start development server**
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Start Interview Preparation**
+   - Upload your resume
+   - Enter job description
+   - Begin AI-assisted preparation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Screen Sharing**
+   - Click "Share Screen" button
+   - Select window/application
+   - Start collaborative session
 
-## Learn More
+3. **AI Interaction**
+   - Type or use voice commands
+   - Get real-time feedback
+   - Practice technical questions
 
-To learn more about Next.js, take a look at the following resources:
+## 🌟 Key Features in Detail
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Resume Analysis
+```javascript
+// Example of resume analysis feature
+const analyzeResume = async (file) => {
+  const result = await api.analyze(file);
+  return {
+    skills: result.skills,
+    experience: result.experience,
+    suggestions: result.suggestions
+  };
+};
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Screen Sharing
+```javascript
+// Example of screen sharing implementation
+const startSharing = async () => {
+  const stream = await navigator.mediaDevices.getDisplayMedia({
+    video: true
+  });
+  return stream;
+};
+```
 
-## Deploy on Vercel
+### AI Chat Interface
+```javascript
+// Example of AI chat interaction
+const chatWithAI = async (message) => {
+  const response = await ai.generateResponse(message);
+  return response;
+};
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📧 Contact
+
+For any queries, reach out to us at kushyanthpothineni2003@gmail.com
+
+---
+
+<div align="center">
+  <p>Built with ❤️ by Superior Developers Team</p>
+  <p>
+    <a href="https://twitter.com/instans">Twitter</a> •
+    <a href="https://linkedin.com/company/instans">LinkedIn</a> •
+    <a href="https://github.com/instans">GitHub</a>
+  </p>
+</div>
